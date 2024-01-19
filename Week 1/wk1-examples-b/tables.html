@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Tables</title>
+  </head>
+  <body>
+    <h1>HTML tables</h1>
+    <table>
+      <thead>
+        <tr><!-- tr stands for table row -->
+          <th>Group #</th><!-- th stands for table heading -->
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><!-- td stands for table data -->
+          <td>John Doe</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Harry Potter</td>
+        </tr>
+      </tbody>
+      <!-- You can also have tfoot for any footer rows (e.g. a totals row). -->
+    </table>
+    <!-- An example using rowspan, colspan -->
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">GROUP</th><!-- rowspan and colspan are used on th or td-->
+          <th colspan="2">GROUP MEMBER</th>
+        </tr>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        <tr>
+          <td rowspan="2">2</td>
+          <td>Jane</td>
+          <td>Smith</td>
+        </tr>
+        <tr>
+          <td>Joe</td>
+          <td>Schmoe</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

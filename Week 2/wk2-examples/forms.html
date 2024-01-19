@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <!-- All stuff that belongs to forms - including submit buttons - go inside a FORM element. -->
+    <!-- 
+      There is a method attribute (GET by default). This sets how form
+      data will be submitted.
+      
+      - "get": GET forms (the default if the method attribute is not set) submit the data 
+               via the URL. This is usually used for simple search
+               forms where it doesn't matter if the data is visible in the URL. Searches are
+               not secure data so this doesn't matter. It's also useful to be able to bookmark
+               a search page. Since GET forms pass data via the URL, there is a character limit on
+               GET form data.
+      - "post": POST forms do NOT submit via the URL, so this is inherently more secure (i.e. the
+                data is not immediately exposed). Most forms should use POST as the submission
+                method. Wherever there is more sensitive data, use POST (e.g. a login form or 
+                checkout form).
+    -->
+    <!--
+      There is an action attribute. This value is the destination (URI/URL) where the form data
+      will be submitted to. As we're not doing any server-side form processing in this class, you
+      can omit this attribute for this class, but it's important to know about this attribute.
+    -->
+    <h2>Search form example</h2>
+        <form method="get">
+          <label for="q">Search:</label>
+          <input type="text" id="q" name="query" placeholder="e.g. arctic fox"> <!--input us self closing-->
+          <button type="submit">Search</button>
+        </form>
+
+    <h2>Login form example</h2>
+    <form method="post">
+      <div>
+        <label for="user">Username:</label>
+        <input type="text" id="user" name="u" placeholder="john 123">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="pw">
+      </div>
+      <button type="submit">Log in</button>
+    </form>
+    
+
+    <h2>Random form example</h2>
+    <p>The following is just a form used to test out a few form fields.</p>
+
+    <form method="post">
+        <div>
+          <label for="family">Number of people in your household:</label>
+          <input type="number" id="family" name="family" placeholder="1" min="1"> <!--will allow user to use arrows to select number. You can set a min and a max-->
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="555-555-5555"> 
+            <!--just a test field, no label, but you should have a label-->
+            <input type="text" id="test" name="test" placeholder="25" inputmode="numeric"> <!--looks like text box but will bring up number pad in mobile-->
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="john.doe@123.com"> <!--will bring up @ on mobile-->
+          <!--if you need to pass data but not have it visible (visible when inspect)-->
+          <input type="hidden" id="hidden-field" name="hidden-field" value="myhiddenvalue">
+        </div>
+        <div>
+          <input type="color" id="color" name="color"> <!--colour picker(for newer browser)-->
+          <input type="date"  id="date" name="date"> <!--date picker (for newer browser)-->
+          <input type="url" id="website" name="website" placeholder="https://www.example.com">
+        </div>
+        <div>
+          <input type="checkbox" id="suscribe" name="subscribe" value="subscribed">
+          <label for="subscribe">Subscribe to our Newsletter</label>
+          <div>
+            <fieldset>
+              <legend>What is your age group?</legend> <!--the names of each option have to be the same in order for them to be in the same group-->
+              <input type="radio" id="tens" name="age" value="tens">
+              <label for="tens">10 - 19</label>
+              <input type="radio" id="twenties" name="age" checked value="twenties">
+              <label for="twenties">20 - 29</label>
+            </fieldset>
+          </div>
+        </div>
+        <div>
+          <label for="reason">Reason for enquiry:</label>
+          <select id="reason" name="reason">
+            <option disabled selected value="">--Select a reason--</option>
+            <option value="sales">Sales enquiry</option>
+            <optgroup label="Other"> <!--use for organizing options into groups, adds extra unclickable label-->
+            <option value="legal">Legal enquiry</option>
+            <option value="general">General enquiry</option>
+          </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="msg">Message:</label>
+          </div>
+          <div>
+          <textarea id="msg" name="msg" placeholder="Your message text here..."></textarea> <!--keep open and close tags on same line-->
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button">General button</button>
+        <button type="reset">Clear Form</button>
+    </form>
+  </body>
+</html>
