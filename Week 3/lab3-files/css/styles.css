@@ -1,0 +1,91 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.25;
+}
+
+h1 {
+    font-family:cursive;
+    font-size: 3em;
+    padding-left: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    background-color: #fbd9ef;
+    border-radius: 10px;
+
+}
+
+a:link {
+    color: #f53eb8;
+}
+
+a:visited {
+    color: #923c75;
+}
+
+a:hover {
+    color: #653281;
+}
+
+a:active {
+    color:#56f53e;
+}
+
+code {
+    background-color: #d9d9d9;
+    padding: 0.3em;
+}
+
+.main-content {
+    border-style: none;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 0;
+    background-color: #fcf9d5;
+    box-shadow: 3px 3px 5px 5px rgb(176, 176, 176);
+}
+
+#author {
+    border-style: none;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 2em;
+    background-color: #d5fcec;
+}
+#comments {
+    border-style: none;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 2em;
+    background-color: #fcf9d5;
+}
+
+#footer {
+    border-style: none;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 2em;
+    background-color: #d5fcec;
+}
+
+button {
+    padding: 0.3em;
+    background-color: #fbd9ef;
+    border-radius: 7px;
+    border-style:solid;
+}
+
+button:hover {
+    background-color: #c479ab;
+    color: white;
+    border-color: white;
+}
+
+form{
+    background-color: #fcf9d5;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgb(176, 176, 176);
+}

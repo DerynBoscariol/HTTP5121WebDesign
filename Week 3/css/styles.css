@@ -1,0 +1,127 @@
+/* CSS rule is made of a selector or selectors followed by CSS statements enclosed in curly brackets 
+Selectors can be elements (w/no special characters) ex. body 
+Selectors can also be an id selector: #<id-name> 
+
+CSS overrides browser defaults*/
+
+body {
+    /* Font stack - in this ex. Arial is font of choice but if it doesn't exist on the users 
+    computer it will use helvetica as a fall back and if they don't have that it will use and sans serif */
+    font-family: Arial, Helvetica, sans-serif; /* unless otherwise specified by you or specifically by a browser (ex.within a button), 
+    the rest of the page will inherit this font family */
+    font-size: 1em; /* typical desktop font size is 16px so 1em will be 1 x 16= 16px (1em = 100%) - this is recommended because
+     it is relational and if you switch one font size everything else will adjust accordingly - it is also reccomended for padding*/
+    /* line-height: 1.25; */
+    /* font: <font-style> <font-size/line-height> <font-family> */
+    font:normal 1em/1.25 Arial, Helvetica, sans-serif; 
+    margin:0;
+}
+
+
+
+a:link {
+    color:#9500ff;
+}
+
+/* psuedo classes are displayed with a " : " 
+a:link - any a element with an href
+a:visited - links that have been visited
+a:active - the element is in the state of being clicked 
+on but you haven't unclicked your mouse yet
+
+Order is important in pseudo classes, if multiple 
+selectors have the same number of elements and 
+pseudo classes they have the same specificity.
+You want to go from most passive to active
+a
+a:link
+a:visited
+a:hover
+a:active*/
+
+a:visited{
+    color:#555;
+}
+a:hover {
+    color: black;
+}
+a:active {
+    color:#79cb21;
+}
+
+#header a {
+    text-decoration: none; /* remove any underline just from links in the header */
+}
+
+#main-navigation a {
+    text-transform: uppercase;
+}
+
+#main-navigation li {
+    display: inline-block;
+    margin-right: 3em;
+}
+#main-navigation li:last-child {
+    margin-right: 0;
+}
+#main-navigation ul{
+    margin-bottom: 0;
+    padding: 0;
+}
+
+a.button, button {
+    background-color: #9500ff;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    border: none;
+    display: inline-block;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+button.large {
+    font-size: 2em;
+}
+
+#header {
+    background-color: #d9a9fb;
+    padding: 1em 2em;
+    /* border:<border-width> <border-style> <border-color> */
+    border-bottom: 5px solid #9500ff;
+    /* padding: 1px;  will get rid of margin space 
+    above header - so will setting sitename margin to 0 */
+}
+
+#sitename {
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin:0;
+}
+
+#sitename::before {
+    content: "{";
+}
+#sitename::after {
+    content: "}";
+}
+h1 {
+    font-size: 4em;
+
+}
+
+#main h2 { /*the space between main and h2 indicates it's a descendant*/
+    font-style: italic;
+}
+#sidebar {
+    font-size: 0.9em;
+}
+/* class selector is .<class name> */
+.block-heading{
+    font-weight: normal; /*regular font weight, not bold */
+    text-transform: uppercase;
+    background-color: #9500ff;
+    color: white;
+    padding: 0.5em 0.8em; /* <top/bottom> <left/right> values move clockwise */
+}
