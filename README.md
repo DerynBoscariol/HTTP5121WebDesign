@@ -18,3 +18,8 @@ This is a repo to store files from HTTP5121 Web Design
 | Lab 9 | Apr 3 | 5% |
 | Project | Apr 19 | 16% |
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9d9e61febe14282011a9bbf600199135c18bc881
