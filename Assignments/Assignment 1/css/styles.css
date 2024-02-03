@@ -1,4 +1,40 @@
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header {
+    padding: 0em;
+   /* border-bottom: 3px solid;*/
+    margin: 0em;
+}
+
+#main-navigation {
+    background-color: #96f4f4;
+    padding: 0em;
+    border-style: solid;
+}
+
+#main-navigation li {
+    display: inline-block;
+    padding: 0.4em;
+}
+
+#sitename {
+    font-size: 2em;
+    padding: 1em;
+}
+
+#main {
+    padding: 1em;
 }
