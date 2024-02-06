@@ -10,6 +10,7 @@ h1 {
     font-size: 2.5em;
     text-decoration: none;
     margin-bottom: 0em;
+    color:  #685097;
 }
 
 #date {
@@ -21,9 +22,10 @@ h1 {
 #header {
     text-align: center;
     text-decoration: none;
-    background-color: #cadfff;
+    background-color: #d5e6ff;
     margin-top: 0;
     padding-top: 1em;
+    width: 100%;
 }
 
 #header a {
@@ -42,19 +44,21 @@ h1 {
 #nav-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap:3em;
     list-style-type: none;
-    color:#64baf3;
+    color: #685097;
 }
 
 #nav-list a {
     text-decoration: none;
+    color: #685097;
 }
 
 
 #nav-list a:visited {
-    color: #4e95c5;
+    color:  #685097;;
     text-decoration: none;
 }
 
@@ -64,13 +68,17 @@ h1 {
     color: black;
 }
 
+#nav-list a:active{
+    text-decoration: none;
+}
+
 
 #sitename {
     font-size: 2.8em;
     padding: 0.3em;
     text-decoration: none;
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
-
+    color:black;
 }
 
 #sitename a:visited {
@@ -81,7 +89,7 @@ h1 {
 
 #sitename a:hover {
     text-decoration: none;
-    color:#64baf3;
+    color: #685097;;
 }
 
 #main-content {
@@ -94,27 +102,20 @@ h1 {
     margin-left:7em;
     margin-top: 2em;
 }
-/*
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-} */
 
 #sidebar {
     flex-basis: 200%;
     flex-grow: 1;
     align-self: flex-start;
-    background-color: #cadfff;
+    background-color: #eff8ff;
     padding: 1em;
     margin-top: 8em;
     margin-right: 2em;
     color:black;
     border-radius: 15px;
-    border-width: 5px;
+    border-width: 2px;
     border-style: solid;
-    border-color: #afcfff;
+    border-color: #685097;
     
 }
 
@@ -129,14 +130,23 @@ img {
     text-decoration: underline;
 }
 
+#sidebar a:active{
+    text-decoration: none;
+}
+
 #comments {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    justify-content:left;
     gap: 1em;
     padding-bottom: 2em;  
+    margin-top: 3em;
+}
+
+#form {
+    margin-top: 0;
 }
 
 #comment {
@@ -145,18 +155,27 @@ img {
 }
 
 .button {
-    background-color: #bdd3f3;
     padding: 0.2em;
     width: 10em;
     align-self: center;
     font-size: 1em;
     border-style: solid;
     border-radius: 30px;
+    border-color: #685097;
+    color: #685097;
+    background-color: #d5e6ff;
 }
 
 .button:hover {
-    background-color: #3b6d8e;
+    background-color: #685097;
     color: #FFFF;
+    border-color: #ffff;
+}
+
+.button:active {
+    background-color: #ffff;
+    color: #685097;
+    border-color: #685097;
 }
 
 
