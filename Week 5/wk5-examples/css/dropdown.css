@@ -1,0 +1,33 @@
+/* BASIC DROP DOWN MENU FUNCTIONALITY */
+
+nav ul {
+  list-style: none;
+  border: 1px solid black;
+  padding:0;
+}
+.inline-menu {
+    display: flex;
+    column-gap: 5em;
+}
+.inline-menu li {
+    position: relative; /*ancestor of .inline-menu li:hover > ul */
+
+}
+.inline-menu ul {
+    /* Sub menu */
+  position:absolute; /* adds more consistent spacing in this context */
+  left:-10000px;
+  top: calc(1em + 1px); /* can play around with spacing so that it's not overlapping but ***Don't make this too far down otherwise you won't be able to click on menu items */
+}
+/* > indicates a child so below I am selecting
+ any ul that is a child of an li which is being 
+ hovered over*/
+.inline-menu li:hover > ul {
+  left:0;
+}
+
+.inline-menu ul li:hover > ul {
+    left:100%;
+    top: 0px;
+}
+/*above will make 3rd nested menu open to the side and down from submenu */
