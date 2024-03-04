@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site name and logo
+ * -- 2b. Navigation
+ * 3. MAIN CONTENT
+ * -- 3a. Hero
+ * -- 3b. Other sections
+ * 4. FOOTER
+ * -- 4a. Navigation
+ *************************************************************/
+
+/* 1. GENERAL/DEFAULT STYLES */
+/*CSS customs act as variables but cannot be changed as often*/
+:root {
+    --accent-color: #E0376A;
+    --secondary-color: #000000;
+}
+html {
+    box-sizing: border-box; /* includes padding and border in width and height*/
+}
+*,*::before, *::after { /* Stars * mean all */
+    box-sizing: inherit; /* best way to set box sizing property because it doesn't automatically inherit */
+}
+body{
+    font: 300 1em/1.2 "Open Sans", sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.25em;
+}
+.content-wrapper {
+    max-width: 1300px;
+    margin:0 auto; /* for a block element you can use auto left and right margins to horizanttally center */
+    padding: 20px;
+}
+.pink-bg{
+    background-color: var(--accent-color);
+}
+.pink-bg a.button:hover, .pink-bg .button:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+.pink-bg a {
+    color: white;
+    text-decoration: none;
+}
+a {
+    color: var(--accent-color);
+}
+a :hover {
+    text-decoration: none;
+}
+a.button, .button {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9375em; /* 15px */
+    padding: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button:hover {
+    background-color: var(--accent-color);
+}
+/* 2. HEADER */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*vertically centers a row */
+}
+#header a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* -- 2a. Site name and logo */
+#logo-and-site-name {
+    font-size: 2em; /*32 px /16px = 2em */
+}
+#logo-and-site-name a ::before {
+    content: "(^._.^)";
+    color: var(--accent-color);
+}
+
+/* -- 2b. Navigation */
+#main-navigation ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    column-gap: 2.42em; /* 38.75 / 16 = 2.42 */
+}
+#main-navigation a {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+#main-navigation a:hover{
+    color: var(--accent-color);
+}
+
+/* 3. MAIN CONTENT */
+
+/* -- 3a. Hero */
+.hero-text {
+    background: linear-gradient(to right, #0d0d0b, #272221);
+    height:360px;
+
+}
+.hero-text .content-wrapper {
+    background: url("../images/black-cat-hero.png") center center no-repeat;
+    /* above same as:
+    background-position-x: center;
+    background-position-y: center;*/
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.hero-text h1 {
+    color: white;
+    font-size: 6em; /* 96/60 = 6ish*/
+    text-shadow: 5px 5px 0 var(--accent-color);
+    margin: 0;
+}
+
+/* -- 3b. Other sections */
+#join-us-section {
+    text-align: center;
+}
+
+.feature-text {
+    font-size: 2em;
+}
+
+#learn-section {
+    text-align: center;
+}
+
+#learn-section .content-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#learn-section h2 {
+    flex:1 0 100%; /*force h2 to have 100% width */
+}
+
+#learn-section .col {
+    flex:1 0 0;
+}
+
+/* 4. FOOTER */
+
+/* -- 4a. Navigation */
