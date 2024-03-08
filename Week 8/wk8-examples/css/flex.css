@@ -1,0 +1,110 @@
+/******************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL STYLES
+ * 2. LAYOUT EXAMPLE
+ * 3. BASIC MENU
+ */
+
+/* 1. GENERAL STYLES */
+html {
+  box-sizing:border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing:inherit;
+}
+
+/* 2. LAYOUT EXAMPLE */
+.flex-container-row,
+#main, header, #suggested-articles, 
+.col, #sidebar-one, #sidebar-two, #footer {
+  border:1px solid #000;
+}
+#header, #footer,
+#main, #sidebar-one, #sidebar-two {
+  padding:1em;
+}
+
+.flex-container-row {
+  padding:1em;
+  border:2px solid #c498ff; /* so flex container is visible */
+  
+  /* FLEX CONTAINER STUFF BELOW */
+  display:flex; /* set container to use flexbox */
+  flex-flow:row wrap;
+  gap:1em;
+}
+.flex-item {
+  border:2px solid #fdd489; /* so flex item is easily visible */
+
+  flex:1 0 0;
+}
+
+#main {
+  flex:2 0 0;
+}
+#sidebar-one, #sidebar-two {
+  flex:1 0 0;
+}
+#sidebar-one {
+  order:-1;
+}
+
+img {
+  /* make images responsive */
+  max-width:100%;
+  height:auto;
+}
+
+#suggested-articles img {
+  width:100%; /* force full width */
+}
+
+/* 3. BASIC MENU */
+
+/* Default inline menu */
+#main-navigation ul {
+  padding:0;
+  display:flex;
+  column-gap:2em;
+  list-style:none;
+}
+
+/* 4. MEDIA QUERIES */
+/*Tablet styles*/
+@media screen and (max-width:960px) {
+    #sidebar-one{
+      order:1;
+      flex-basis:100%;
+    }
+
+    #main {
+      flex-grow: 3;
+      background-color: yellow;
+    }
+}
+
+/*Mobile styles*/
+
+@media screen and (max-width:640px) {
+  #sidebar-one {
+    order:0;
+  }
+  
+  #main {
+    background-color: cyan;
+  }
+
+  #main-navigation
+
+  #main-navigation ul.show-small {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: #ddd;
+    
+  }
+}

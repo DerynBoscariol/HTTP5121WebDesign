@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to media queries</title>
+    <meta name = "viewport" content = "width=device-width"> <!--Required for media queries to work-->
+    <link rel="stylesheet" type="text/css" href="css/flex.css">
+    <script async defer src="js/script.js"></script> <!--async defer serves same purpose as js onload function-->
+  </head>
+  <body>
+    <header id="header">
+      <h2 id="site-name"><a href="#">Site name</a></h2>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <button class="menu-toggle" onclick="toggleMenu()">Menu</button> <!--In nav so screen readers can still identify nav while menu is hidden-->
+        <ul id="main-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="flex-container-row">
+      <main id="main"><!-- order: 0 -->
+        <h1>Example title</h1>
+        <p>My main content here...</p>
+        <section id="suggested-articles">
+          <h2>Suggested Articles</h2>
+          <div class="flex-container-row">
+            <div class="flex-item">
+              <a href="#"><img src="images/dog.webp" width="150" alt="Pug splooting"></a>
+              <h3><a href="#">Article 1</a></h3>
+            </div> 
+            <div class="flex-item">
+              <a href="#"><img src="images/dog.webp" width="150" alt="Pug splooting"></a>
+              <h3><a href="#">Article 2</a></h3>
+            </div> 
+            <div class="flex-item">
+              <a href="#"><img src="images/dog.webp" width="150" alt="Pug splooting"></a>
+              <h3><a href="#">Article 3</a></h3>
+            </div> 
+          </div>
+        </section>
+      </main>
+      <aside id="sidebar-one"><!-- order: -1 -->
+        Sidebar 1 content
+      </aside>
+      <aside id="sidebar-two"><!-- order: 0 -->
+        Sidebar 2 content
+      </aside>
+    </div>
+    <footer id="footer">
+      Footer content
+    </footer>
+  </body>
+</html>
