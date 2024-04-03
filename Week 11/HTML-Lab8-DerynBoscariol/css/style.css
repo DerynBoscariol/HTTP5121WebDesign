@@ -1,0 +1,26 @@
+.square {
+	width: 100px;
+	height: 100px;
+	background: #8913b8;
+    position: absolute;
+    left:47.5%;
+    top:30%;
+}
+
+.spin {
+    transform: rotate(1440deg) scale(3);
+    transition: all, 10s, ease, 3s;
+}
+
+
+button {
+    position: absolute;
+    left:50%;
+    top:65%;
+    transition: all, 2s, ease, 1s;
+}
+
+button:hover {
+    transform: scale(3);
+    background-color: aquamarine;
+}
