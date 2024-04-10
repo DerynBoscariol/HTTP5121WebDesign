@@ -1,0 +1,376 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+body {
+    background-color:#C6E9F9 ;
+    font-family: 'Inter', 'Arial';
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* HEADER */
+header {
+    background-color: #0D5C63;
+    font-size: 1.75em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#logo {
+    margin-left: 1.4375em;
+    margin-top: 0.6875em;
+    margin-bottom: 0.6875em;
+}
+.nav-toggle {
+    display:none;
+}
+
+#nav-list {
+    display: flex;
+    list-style: none;
+    gap: 4.375em;
+    justify-content: end;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-right: 4.125em;
+    padding-bottom: 1em;
+}
+
+header a {
+    text-decoration: none;
+    color:#C6E9F9;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/*MAIN*/
+
+
+/* FOOTER */
+#footer {
+    background-color: #0D5C63;
+    color: #C6E9F9;
+    font-size: 1.25em;
+    padding-left: 2.875em;
+    padding-top: 3.875em;
+    padding-right: 1.875em;
+    padding-bottom: 1em;
+    display: flex;
+    align-items: baseline;
+    align-content: flex-end;
+    justify-content: space-between;
+    gap: 4em;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #C6E9F9;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    width: 60%;
+}
+
+#break {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+
+@media screen and (max-width:768px) {
+
+    /* TABLET - HEADER */
+    header {
+        font-size: 1.25em;
+
+    }
+
+    #nav-list {
+        gap: 2.375em;
+        padding-right: 2.375em;
+    }
+
+    /* TABLET - INTRO */
+    #intro-text h3 {
+        font-size: 1.25em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #intro-text h2 {
+        font-size: 1.5em;
+    }
+
+    #intro img {
+        max-width: 34%;
+    }
+
+    /* TABLET - ABOUT ME */
+    #about-me {
+        padding-bottom: 3.625em;
+    }
+
+    #about-me h3 {
+        font-size: 2em;
+    }
+
+    #about-me img {
+        max-width: 14.75em;
+    }
+
+    #bio {
+        gap: 1.375em;
+
+    }
+
+    #bio-text {
+        font-size: 0.875em;
+    }
+    
+    /* TABLET - CONTACT */
+    #contact {
+        margin-top: 2.25em;
+        margin-left: 2.25em;
+        margin-right: 2.25em;
+    }
+    #contact h3{
+        font-size: 2em;
+    }
+
+    #direct-and-links {
+        font-size: 1em;
+        gap:5.125em;
+        margin-top: 0.4375em;
+        margin-bottom: 2.25em;
+    }
+
+    #contact-form {
+        max-width: 24em;
+        gap: 1.125em;
+    }
+    
+    .form-label {
+        margin-bottom: 0.5em;
+    }
+    
+    .sm-input {
+        font-size: 1em;
+    }
+    
+    textarea {
+        width: 17.625em;
+        height:6.3125em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+    } 
+
+    #social-links i {
+        font-size: 2.5em;
+        margin-right: 40px;
+    }
+
+    /* TABLET - FOOTER */
+    #footer {
+        font-size: 0.875em;
+        padding-left: 2.25em;
+        padding-top: 1.4375em;
+        padding-right: 1.75em;
+        gap: 2.4375em;
+    }
+
+    #copyright {
+        width: 60%;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width:320px) {
+        /* MOBILE - HEADER */
+    header {
+        font-size: 1em;
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.5625em;
+        border-bottom: 1px solid #C6E9F9;
+    }
+    #logo {
+        margin: 0;
+    }
+    #logo img {
+        max-width: 1.8125em;
+        margin-left: 6px;
+
+    }
+    .nav-toggle {
+        display:block;
+        margin-right: 22px;
+        border-style: none;
+        background-color: #0D5C63;
+        color: #C6E9F9;
+        font-size: 2em;
+    }
+
+    #nav-list {
+        display: none;
+    }
+
+    #nav-list.show-small {
+        display:flex;
+        position: absolute;
+        right: 0;
+        width: 1.8125em;
+        height: auto;
+        background-color: #0D5C63;
+        gap: 1em;
+        flex-flow:row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top:1em;
+        padding-bottom: 1em;
+        margin-right: 1em;
+        border: 1px solid #C6E9F9;
+    }
+
+
+    /* MOBILE - INTRO */
+    #intro {
+        flex-flow: column;
+        margin-top: 3.125em;
+        margin-bottom: 0.6875em;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    #intro-text h3 {
+        font-size: 0.875em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #intro-text h2 {
+        font-size: 0.875em;
+    }
+
+    #intro img {
+        max-width: 7.8125em;
+        margin-right: 0;
+    }
+
+    /* MOBILE - ABOUT ME */
+    #about-me {
+        padding-top: 1.125em;
+        padding-bottom: 2.875em;
+
+    }
+
+    #about-me h3 {
+        font-size: 1.25em;
+    }
+
+    #about-me img {
+        max-width: 5.9375em;
+    }
+
+    #bio {
+        gap: 0.4375em;
+        flex-flow: column;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    #bio-text {
+        font-size: 0.875em;
+        flex-grow: 1;
+        max-width: fit-content;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    /* MOBILE - CONTACT */
+    #contact {
+        margin-top: 2.25em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #contact h3{
+        font-size: 1.25em;
+    }
+
+    #direct-and-links {
+        flex-flow: column-reverse;
+        font-size: 0.8125em;
+        gap: 2.625em;
+        margin-top: 0.4375em;
+        margin-bottom: 2.25em;
+    }
+
+    #contact-form {
+        max-width: 24em;
+        gap: 1.125em;
+    }
+    
+    .form-label {
+        margin-bottom: 0.5em;
+    }
+    
+    .sm-input {
+        font-size: 0.8125em;
+    }
+    
+    textarea {
+        width: 16.6875em;
+        height: 4.75em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+    } 
+
+    #social-links i {
+        font-size: 2.5em;
+        margin-right: 0.9375em;
+    }
+
+    /* MOBILE - FOOTER */
+    #footer {
+        font-size: 0.75em;
+        padding-left: 0;
+        padding-top: 0.5em;
+        padding-bottom: 1em;
+        padding-right: 0;
+        display: block;
+        text-align: center;
+        line-height: 50%;
+    }
+
+    #copyright {
+        width: 100%;
+    }
+
+    #break {
+        display: inline-block;
+    }
+}

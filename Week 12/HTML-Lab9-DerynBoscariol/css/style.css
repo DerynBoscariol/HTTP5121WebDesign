@@ -1,0 +1,62 @@
+
+
+#sky {
+    height: 300px;
+    width: 1300px;
+    background-color: #1c1341;
+    border: 1px, solid, black;
+    overflow: hidden;
+    animation: sky-change 10s infinite;
+}
+
+#sun {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    animation: sun-move 10s infinite;
+    position: relative;
+}
+
+@keyframes sky-change {
+    0% {
+        background-color: #1c1341;
+    }
+    25%{
+        background-color: darkorange;
+    }
+    50% {
+        background-color: skyblue;
+    }
+    75% {
+        background-color: crimson;
+    }
+    100% {
+        background-color: #1c1341;
+    }
+
+}
+
+@keyframes sun-move {
+    0% {
+        left:1300px;
+        top:325px;
+        background-color: red;
+    }
+
+    50% {
+        left: 650px;
+        top: 10px;
+        background-color: yellow;
+    }
+    100% {
+        left:0px;
+        top:325px;
+        background-color: orangered;
+    }
+}
+
+.paused {
+    animation-play-state: paused !important;
+    
+}
