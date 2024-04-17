@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/765e21a9c4.js" crossorigin="anonymous"></script>
     <script async src="js/script.js"></script>
 </head>
-<body>
+<body class="scroll-color-change">
     <header id="header">
       <div id="logo"> 
          <a href="/"><img src="imgs/Logo.svg" alt="site logo comprised of the letters D and B"></a>
@@ -24,10 +24,61 @@
         </nav>
     </header>
     <main>
-        <h1>My CSS experiments</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus 
-            vero accusantium omnis cum, inventore maxime aperiam fuga quisquam eligendi 
-            dolor sint eius error enim placeat repellat minus corporis quibusdam?</p>
+        <div id="welcome-banner">
+          <div id="banner">
+            <h1>My CSS experiments</h1>
+          </div>
+        </div>
+        <div id ="experiments">
+          <div id="record-player" class="item">
+            <p>Click the play/pause button to start and stop the record</p>
+            <div id="record-table">
+              <div id="record">
+                <div id="record-label"></div>
+              </div>
+              <div id="record-arm"></div>
+              <div id="stop-start">&#9658; / &#10073;&#10073;</div>
+            </div>
+          </div>
+          <div id="mug-spill" class="item">
+            <div id="coffee-instructions">Click the mug</div>
+            <div id="cup-cover"></div>
+            <div id="mug">
+              <div id="cup">
+                <div id="cup-hole"></div>
+              </div>
+              <div id="handle"></div>
+            </div>
+            <div id="coffee-puddle"></div>
+            <div id="coffee-flow"></div>
+          </div>
+          <div id="heartbeat" class="item">
+            <p>Hover in this box</p>
+              <div id="heart"></div>
+          </div>
+          <div id="flower-bloom" class="item">
+            <div id="flower-instruction"><p>Click in this box to bring out the sun</p></div>
+            <div id="flower">
+              <div id="stem"></div>
+              <div id="petal-1" class="petal"></div>
+              <div id="petal-2" class="petal"></div>
+              <div id="petal-3" class="petal"></div>
+              <div id="petal-4" class="petal"></div>
+              <div id="petal-5" class="petal"></div>
+              <div id="petal-6" class="petal"></div>
+              <div id="petal-7" class="petal"></div>
+              <div id="petal-8" class="petal"></div>
+              <div id="petal-9" class="petal"></div>
+              <div id="petal-10" class="petal"></div>
+              <div id="flower-center"></div>
+            </div>
+          </div>
+          <div id="bouncing-i" class="item">
+            <p>Hover in this box</p>
+            <div id="i-top"></div>
+            <div id="i-bottom"></div>
+          </div>
+        </div>
     </main>
     <footer id="footer">
         <p id ="copyright">©Copyright 2024 Deryn Boscariol All Rights Reserved</p>
